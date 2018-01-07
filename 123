@@ -1,0 +1,33 @@
+int main() 
+{ 
+cout << "│1│ │2│ │3│" << endl; 
+cout << "● ● ●" << endl; 
+cout << "● ● ● ●" << endl; 
+cout << "● ● ● ● ●" << endl; 
+cout << "│ │ │ │ │ │ │ │ │" << endl; 
+
+while(1) 
+{ 
+char start; 
+cout << "請問要玩嗎(y/n)?"; 
+cin >> start; 
+
+if(start=='n') 
+break; 
+
+srand(time(NULL)); 
+int array[10] = {0}; 
+for(int i=0; i<50; i++) 
+array[rand()%10]++; 
+
+for(int i=0; i<10; i++) 
+{ 
+cout << i << ": "; 
+for(int j=0; j<array[i]; j++) 
+cout << "*"; 
+cout << endl; 
+} 
+} 
+system("pause"); 
+return 0; 
+} 
